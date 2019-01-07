@@ -1,0 +1,24 @@
+
+
+a {
+  color: black;
+ 
+}
+
+.menu-container {
+  /* display: flex!important;
+  justify-content: space-between!important; */
+  /* padding: 0!important;
+  max-width: 1200px!important;
+  width: 100%!important; */
+}
+
+.navbar-nav,
+.mr-auto, 
+.container.menu-container
+ {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-between;
+}

@@ -1,0 +1,28 @@
+- var label = link
+
+html 
+    include ./includes/head.pug
+    body
+        include ./includes/header.pug
+        div.container .
+            h2 Users List
+            if users
+                table.table .
+                    thead
+                        tr
+                            th(scope='col') 
+                            th(scope='col') Name
+                            th(scope='col') Email
+                            th(scope='col') Favourite Book
+                    tbody
+                    each user in users
+                        tr
+                            th(scope='row')
+                                td #{user.name}
+                                td #{user.email}
+                                td #{user.book}
+            else
+                p No users in database
+
+                
+                

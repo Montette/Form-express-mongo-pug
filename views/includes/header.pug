@@ -1,0 +1,26 @@
+
+- var links = { "Home": "/", "Users": "/users"}
+- var label = link
+
+
+mixin nav-item(name, link)
+  li.nav-item
+    a.nav-link(href=link)= name
+  
+nav.navbar.navbar-dark.bg-primary
+  .container.menu-container
+    
+    .navbar-brand 
+      a.nav-link(href="/") BooksSurvey
+    
+    ul.nav.navbar-nav
+      each val, key in links
+        +nav-item(key, val)
+      li.nav-item
+        a.nav-link(href="/") #{label}
+    
+    //- ul.nav.navbar-nav.pull-xs-right  
+    //-   li.nav-item
+    //-     a.nav-link(href="/log-in") 
+    //-       i.fa.fa-wrench
+    //-       | Log in
